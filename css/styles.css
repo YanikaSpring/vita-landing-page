@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "Russo One";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/src/fonts/russo-one.woff2")
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/src/fonts/OpenSans-Regular.woff2")
+}
+
+@font-face {
+  font-family: "Helvetica Nue";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/src/fonts/HelveticaNeueCyr-Roman.woff2")
+}
+
+body {
+  display: grid;
+  grid-template: 63px 65px 1fr auto / auto 1200px auto;
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "body body body"
+    "footer footer footer";
+  min-height: 100vh;
+  background-size: cover;
+  color: #1b1c21;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Helvetica Nue", sans-serif;
+  color: #36bdf2;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.header {
+  border-bottom: 1px solid #36bdf2;
+  grid-area: header;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Helvetica Nue", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header-contact {
+  display: flex;
+  font-family: "Helvetica Nue", sans-serif;
+}
+
+.header-contact-telephone,
+.header-contact-email {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.phone,
+.email,
+.link {
+  color: #1b1c21;
+  text-decoration: none;
+}
+
+.phone:hover,
+.email:hover,
+.link:hover {
+  color: #0c94ca;
+  transition: all 0.2s;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.header-menu {
+  font-family: "Open Sans", sans-serif;
+  grid-area: menu;
+  width: 1200px;
+  margin: 20px auto 0;
+}
+
+.header-menu-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.header-menu-item-link,
+.header-menu-item-link:visited {
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1b1c21;
+}
+
+
+.header-menu-item-link:hover {
+  color: #0c94ca;
+  transition: all 0.2s;
+}
+
+.page-main {
+  grid-area: body;
+  font-family: "Open Sans", sans-serif;
+}
+
+.page-main-title {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 95px 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+
+
+.about-us-banner {
+  display: flex;
+}
+
+.advantages-wrapper {
+  background-color: #34bcf2;
+}
+
+.advantages-list {
+  display: flex;
+  list-style-type: none;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.advantages-item {
+  padding: 0 15px;
+  height: 255px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.advantages-description {
+  text-align: center;
+  display: flex;
+  margin-top: 15px;
+}
+
+.tariffs-wrapper {
+  display: flex;
+  flex-flow: column;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.table-container {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #34bcf2;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.commercial-offer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px #0000001a
+}
+
+.commercial-offer-list {
+  list-style-type: none;
+}
+
+.commercial-offer-list li,
+.commercial-offer-sublist li {
+  padding-bottom: 10px;
+}
+
+.commercial-offer-sublist {
+  list-style-type: none;
+  margin-top: 8px;
+}
+
+.contact {
+  background: #f2f2f2;
+  padding: 15px;
+  border-left: 5px solid #34bcf2;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.page-footer {
+  grid-area: footer;
+  background-color: #34bcf2;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 15px;
+}
+
+.footer-contact-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.footer-contact-title {
+  color: #fff;
+}
+
+.footer-contact {
+  display: flex;
+}
+
+.footer-contact-list {
+  list-style-type: none;
+  display: flex;
+  padding: 25px 0 75px;
+  margin: 0;
+  justify-content: space-evenly;
+  width: 1200px;
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-flow: column;
+  padding: 0 15px;
+  align-items: center;
+  width: 255px;
+  text-align: center;
+}
+
+.footer-contact-item-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0 5px;
+}
+
+.footer-contact-item-description {
+  color: #fffc;
+}
+
+.link-footer,
+.link-footer:visited {
+  color: #fffc;
+  text-decoration: none;
+}
+
+.link-footer:hover {
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (width < 1200px) {
+  .about-us {
+    width: 700px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .advantages-list {
+    flex-flow: column;
+    width: 100%;
+    margin: 0;
+  }
+}

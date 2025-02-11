@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "live-server",
+    "build-css": "sass styles.scss styles.css --watch",
+    "lint:css": "stylelint src/css/**/*.css"
+  },
+  "devDependencies": {
+    "live-server": "1.2.2",
+    "stylelint": "16.14.1",
+    "stylelint-config-standard": "37.0.0"
+  }
+}
