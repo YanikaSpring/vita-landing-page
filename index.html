@@ -8,6 +8,7 @@
       <link href="css/styles.css" rel="stylesheet">
       <link rel="preload" href="fonts/russo-one.woff2" as="font" crossorigin>
       <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin>
+      <link rel="shortcut icon" href="img/fav_vita.png" type="image/png" />
    </head>
    <body class="page-body">
       <header class="header">
@@ -37,28 +38,33 @@
                </div>
             </div>
          </div>
-         <nav class="header-menu">
-            <ul class="header-menu-list">
-               <li class="header-menu-item">
+         <nav class="header-menu header-menu-closed header-menu-nojs">
+          <button class="header-menu-toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="header-menu-list-wrapper">
+             <ul class="header-menu-list">
+                <li class="header-menu-item">
                   <a class="header-menu-item-link" href="#about-us">О нас</a>
-               </li>
-               <li class="header-menu-item">
+                </li>
+                <li class="header-menu-item">
                   <a class="header-menu-item-link" href="#advantages">
-                  Преимущества
-                  </a>
-               </li>
-               <li class="header-menu-item">
+                    Преимущества
+                    </a>
+                </li>
+                <li class="header-menu-item">
                   <a class="header-menu-item-link" href="#commercial-offer">
-                  Коммерческое предложение
-                  </a>
-               </li>
-               <li class="header-menu-item">
-                <a class="header-menu-item-link" href="#tariffs">
-                Транспортные тарифы
-                </a>
-             </li>
-            </ul>
-         </nav>
+                    Коммерческое предложение
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                  <a class="header-menu-item-link" href="#tariffs">
+                    Транспортные тарифы
+                    </a>
+                </li>
+             </ul>
+          </div>
+          </nav>
       </header>
       <main class="page-main">
          <div class="about-us" id="about-us">
@@ -412,5 +418,21 @@
        </div>
          &copy; 2025 ООО "Вита". Все права защищены.
       </footer>
+      <script>
+        var navMain = document.querySelector('.header-menu');
+        var navToggle = document.querySelector('.header-menu-toggle');
+
+        navMain.classList.remove('header-menu-nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('header-menu-closed')) {
+            navMain.classList.remove('header-menu-closed');
+            navMain.classList.add('header-menu-opened');
+          } else {
+            navMain.classList.add('header-menu-closed');
+            navMain.classList.remove('header-menu-opened');
+          }
+        });
+     </script>
    </body>
 </html>
